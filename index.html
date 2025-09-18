@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial Memperbarui Akun Google</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f8ff;
+            /* Alice Blue */
+            background-image:
+                linear-gradient(rgba(173, 216, 230, 0.3) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(173, 216, 230, 0.3) 1px, transparent 1px);
+            background-size: 20px 20px;
+            overflow-x: hidden;
+        }
+
+        .rainbow-text {
+            background: linear-gradient(90deg, #4285F4, #9B72F4, #DB4437, #F4B400, #0F9D58);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+        }
+
+        .icon {
+            position: fixed;
+            opacity: 0.6;
+            animation: float 6s ease-in-out infinite;
+            z-index: 0;
+            /* Properti 'fill' dihapus karena tidak berlaku untuk <img> */
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-20px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .icon-dino {
+            top: 20%;
+            left: 5%;
+            width: 80px;
+            animation-delay: 0s;
+        }
+
+        .icon-rocket {
+            top: 15%;
+            right: 5%;
+            width: 70px;
+            animation-delay: 2s;
+        }
+
+        .icon-heart {
+            bottom: 10%;
+            right: 10%;
+            width: 60px;
+            animation-delay: 1s;
+        }
+
+        .icon-sparkle1 {
+            top: 30%;
+            right: 15%;
+            width: 40px;
+            animation-delay: 3s;
+        }
+
+        .icon-sparkle2 {
+            bottom: 20%;
+            left: 10%;
+            width: 40px;
+            animation-delay: 4s;
+        }
+
+        .icon-megaphone {
+            top: 60%;
+            left: 8%;
+            width: 60px;
+            animation-delay: 0.5s;
+        }
+
+        /* Gaya untuk gambar yang bisa di-zoom dan modal */
+        .tutorial-image {
+            cursor: zoom-in;
+        }
+
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.85);
+            display: none;
+            /* Sembunyi secara default */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+            padding: 1rem;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 90vw;
+            max-height: 90vh;
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: -45px;
+            right: 0px;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.2s;
+        }
+
+        .modal-close:hover {
+            color: #ccc;
+        }
+
+        .modal-overlay.active {
+            display: flex;
+        }
+    </style>
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Decorative Icons -->
+    <!-- Path gambar diperbarui sesuai dengan folder 'assets' -->
+    <img src="assets/Dino.png" alt="icon dino" class="icon icon-dino">
+    <img src="assets/Roket.png" alt="icon rocket" class="icon icon-rocket">
+    <img src="assets/Love.png" alt="icon heart" class="icon icon-heart">
+    <img src="assets/Bintang_.png" alt="icon star" class="icon icon-sparkle1">
+    <img src="assets/Pen.png" alt="icon sparkle" class="icon icon-sparkle2">
+    <img src="assets/Speaker.png" alt="icon megaphone" class="icon icon-megaphone">
+
+
+    <div class="container mx-auto px-4 py-12 relative z-10">
+        <header class="text-center mb-12">
+            <h1 class="text-4xl md:text-5xl font-bold rainbow-text pt-8">
+                Cara Upgrade Akun Google Gemini Pro
+            </h1>
+            <p class="mt-4 text-lg text-gray-600 max-w-2xl mx-auto">
+                Tututorial untuk meng-upgrade akun Google Gemini menjadi Pro selama 1 tahun
+            </p>
+        </header>
+
+        <main class="space-y-8">
+            <!-- Langkah 1 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 1: Scan/Copy link terlebih dahulu</h2>
+                    <p class="mb-4">Hal pertama yang harus dilakukan adalah dengan meng-scan barcode yang tersedia
+                        ataupun dengan menggunakan link.</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Scan menggunakan Google Lens.</li>
+                        <li>Atau bisa melalui link berikut : <a href="https://gsaid.short.gy/319" target="_blank"
+                                class="font-semibold text-blue-500 hover:underline">https://gsaid.short.gy/319</a>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/barcode.jpg" alt="Gambar barcode"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 2 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 2: Mengklik tombol Verifikasi Kelayakan
+                    </h2>
+                    <p class="mb-4">Disini bisa langsung pilih tombol Verifikasi Kelayakan</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Pilih tombol Verifikasi Kelayakan yang tersedia</li>
+                        <li>Selanjutnya akan diarahkan menuju formulir pengisian data diri</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/1.png" alt="Gambar halaman claim"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 3 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 3: Mulai isi Data Diri</h2>
+                    <p class="mb-4">Pastikan Universitas yang diisi sudah sesuai</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Isi bagian <strong>Negara</strong>.</li>
+                        <li>Bagian <strong>Sekolah</strong> diisi dengan nama Universitas.</li>
+                        <li>Setelah itu diikuti oleh pengisian <strong>Nama Depan</strong> yang sesuai dengan KTM.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/2.jpg" alt="Gambar data diri 1" class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 4 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 4: Dilanjutkan dengan pengisian tanggal
+                        lahir dan email</h2>
+                    <p class="mb-4">Pastikan email yang diisi berupa email aktif. Jika memiliki nama hanya satu suku
+                        kata, bisa diulang lagi menggunakan Nama Depan</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Lanjutkan mengisi <strong>Nama Belakang</strong>.</li>
+                        <li>Lengkapi <strong>Tanggal Lahir</strong>.</li>
+                        <li>Selanjutnya isi bagian <strong>Email</strong>.</li>
+                        <li>Periksa kembali <strong>Email & Tanggal Lahir</strong>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/3.jpg" alt="Gambar data diri 2" class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 5 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 5: Unggah Dokumen</h2>
+                    <p class="mb-4">Siapkan gambar/file yang berformat <strong>.jpg, .jpeg, .png, maupun .pdf</strong>.
+                    </p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Unggah gambar/file dari masing-masing dokumen yang dibutuhkan, seperti KTM, Jadwal Kelas,
+                            maupun Hasil Bukti Pembayaran Perkuliahan</li>
+                        <li>Jangan lupa untuk di-cek dan sesuaikan kembali dokumen-dokumennya.</li>
+                        <li>Setelah selesai, pilih tombol <strong>Kirim</strong>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/4.jpg" alt="Halaman Unggah Dokumen"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 6 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 6: Menunggu selama beberapa menit hingga
+                        terverifikasi</h2>
+                    <p class="mb-4">Tunggu hingga diarahkan ke halaman selanjutnya.</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Kurang lebih membutuhkan waktu selama <strong>20 detik hingga 1/2 menit</strong>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/5.jpg" alt="Gambar halaman memuat"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 7 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 7: Halaman Peninjauan</h2>
+                    <p class="mb-4">Jika telah melalui proses pem-verifikasi-an, maka selanjutnya diarahkan menuju
+                        Halaman Peninjauan.</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Selanjutnya untuk <strong>Proses Peninjauan</strong> Data Diri, mahasiswa harus menunggu waktu paling
+                            lambat selama 2 hari.</li>
+                        <li>Untuk mengetahui apakah sudah selesai proses <strong>Peninjauan</strong> tersebut, pihak
+                            SheerID akan mengirimkan <strong>Email</strong> sesuai pada Email pengisian di bagian Data Diri.
+                        </li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/6.jpg" alt="Gambar halaman Peninjauan"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 8 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row-reverse items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 8: Periksa Kotak Masuk/Inbox Melalui Gmail</h2>
+                    <p class="mb-4">Menerima Email Konfirmasi setelah kurang lebih 2 hari.</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Mahasiswa akan mendapatkan <strong>Email Konfirmasi</strong> dari Google.</li>
+                        <li>Periksa <strong>Kotak Masuk/Inbox</strong> melalui aplikasi <strong>Gmail</strong>.</li>
+                        <li>Setelah itu pilih tombol <strong>Dapatkan Google AI Pro</strong>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/7.jpg"
+                        alt="Gambar halaman Pemeriksaan Keamanan" class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+
+            <!-- Langkah 9 -->
+            <section class="card rounded-2xl p-6 md:p-8 flex flex-col md:flex-row items-center gap-8">
+                <div class="md:w-1/2">
+                    <h2 class="text-2xl font-bold text-blue-600 mb-4">Langkah 9: Melakukan Pembayaran</h2>
+                    <p class="mb-4">Pilih metode pembayaran yang diinginkan. Pastikan terhubung dengan Akun Google yang telah diverifikasi.</p>
+                    <ol class="list-decimal list-inside space-y-2 text-gray-700">
+                        <li>Jika belum memiliki/menghubungkan dengan salah satu jenis <strong>Pembayaran</strong> yang tersedia menu, maka diharuskan untuk menambahkan jenis pembayaran yang diinginkan.</li>
+                        <li>Di bawah <strong>Metode pembayaran</strong>, pilih menu Tambahkan Kartu Kredit/Debit.</li>
+                        <li>Atau bisa juga menggunakan <strong>E-Wallet</strong> maupun <strong>M-Banking</strong>.</li>
+                    </ol>
+                </div>
+                <div class="md:w-1/2 w-full">
+                    <img src="assets/8.jpg" alt="Gambar halaman Pembayaran"
+                        class="rounded-lg shadow-md w-full tutorial-image">
+                </div>
+            </section>
+        </main>
+
+        <footer class="text-center mt-12 text-gray-500">
+            <p>&copy; 2025   Panduan Tutorial Upgrade Google AI Pro.</p>
+        </footer>
+    </div>
+
+    <!-- Modal untuk Zoom Gambar -->
+    <div id="imageModal" class="modal-overlay">
+        <span id="closeModal" class="modal-close">&times;</span>
+        <div class="modal-content">
+            <img id="modalImage" src="" alt="Gambar tutorial yang diperbesar" class="modal-image">
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const modal = document.getElementById('imageModal');
+            const modalImg = document.getElementById('modalImage');
+            const closeModalBtn = document.getElementById('closeModal');
+            const tutorialImages = document.querySelectorAll('.tutorial-image');
+
+            // Fungsi untuk membuka modal
+            const openModal = (e) => {
+                modal.classList.add('active');
+                modalImg.src = e.target.src;
+            };
+
+            // Fungsi untuk menutup modal
+            const closeModal = () => {
+                modal.classList.remove('active');
+            };
+
+            // Tambahkan event listener ke setiap gambar
+            tutorialImages.forEach(img => {
+                img.addEventListener('click', openModal);
+            });
+
+            // Event listener untuk tombol close
+            closeModalBtn.addEventListener('click', closeModal);
+
+            // Event listener untuk menutup modal saat mengklik di luar gambar
+            modal.addEventListener('click', (e) => {
+                if (e.target === modal) {
+                    closeModal();
+                }
+            });
+
+            // Event listener untuk menutup modal dengan tombol Escape
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape' && modal.classList.contains('active')) {
+                    closeModal();
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
